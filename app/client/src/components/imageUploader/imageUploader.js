@@ -19,7 +19,8 @@ class ImageUploader extends Component {
         const data = new FormData();
         data.append('image', file)
         message.loading('Uploading...')
-        uploadImage(data).then(res => {
+        // the formdata should be sent but as we mock the image url then we send ordinary object
+        uploadImage({image: 'test'}).then(res => {
             message.destroy();
             if (res){
                 this.setState({imgUrl: res});
