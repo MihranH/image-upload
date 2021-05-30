@@ -1,31 +1,15 @@
-import React, { Component } from 'react';
-import axios from 'axios';
+import React from 'react';
+import ImageUploader from '../imageUploader/imageUploader';
+import ImageCMS from '../imageCMS/imageCMS';
 
-class Main extends Component {
-    constructor(props){
-        super(props)
-        this.state = {
-            data: []
-        }
-    }
-
-    componentDidMount(){
-        axios.get('/api/v1/image/all').then(res => this.setState({data:res.data}))
-    }
-
-    render(){
-        const { data } = this.state;
-        return (
-            <div>
-                {data.map(item => {
-                    return <div>
-                                <p>{item.id}</p>
-                                <p>{item.name}</p>
-                            </div>
-                })}
-            </div>
-        )
-    }
+function Main() {   
+    return (
+        <>
+            <ImageUploader />               
+            <ImageCMS />                           
+        </>
+    )
+    
 }
 
 export default Main;

@@ -3,6 +3,7 @@ const app = express()
 const path = require('path')
 const PORT = process.env.PORT || 8080
 
+app.use(express.json());
 app.use(require('./router'));
 
 if (process.env.NODE_ENV === 'production') {

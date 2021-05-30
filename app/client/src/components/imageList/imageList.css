@@ -1,0 +1,11 @@
+td:nth-child(1){
+    max-width: 150px;
+}
+
+.content {
+    margin: 25px;
+}
+
+.log-info-icon {
+    font-size: 25px;
+}
