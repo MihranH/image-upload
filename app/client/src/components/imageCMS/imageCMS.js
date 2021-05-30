@@ -48,7 +48,7 @@ class ImageCMS extends Component {
     }
 
     render(){
-        const { imgUrl, actions, loading } = this.state;
+        const { imgUrl, loading } = this.state;
         return (
             <div>
               <Input className='url-input' placeholder="Image URL" name="imgUrl" value={imgUrl} onChange={this.handleChange}></Input>
