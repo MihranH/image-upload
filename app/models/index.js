@@ -1,5 +1,4 @@
 const Sequelize  = require('sequelize');
-const path = require('path');
 const { CLEARDB_DATABASE_URL } = require('../config');
 const sequelize = new Sequelize(CLEARDB_DATABASE_URL);
 
